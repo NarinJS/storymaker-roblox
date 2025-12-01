@@ -1,0 +1,6 @@
+[preset]
+roblox = true
+
+[checks]
+unused_variable = false
+undefined_global = false
