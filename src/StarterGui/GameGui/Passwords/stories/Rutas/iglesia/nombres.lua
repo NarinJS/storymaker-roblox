@@ -68,17 +68,17 @@ return function (storyMaker, nombre)
 
     if not data then
         storyMaker:Write("Hmmm, si, " .. nombre .. ", definitivamente podria funcionar")
-    end
-
-    if data.texto then
-        storyMaker:Write(data.texto)
-    end
-
-    if data.textos then
-        for _, i in ipairs(data.textos) do
-            storyMaker:Write(i)
-            task.wait(0.5)
+    else
+        if data.texto then
+            storyMaker:Write(data.texto)
         end
-    end
+
+        if data.textos then
+            for _, i in ipairs(data.textos) do
+                storyMaker:Write(i)
+                task.wait(0.5)
+            end
+        end
     
+    end
 end

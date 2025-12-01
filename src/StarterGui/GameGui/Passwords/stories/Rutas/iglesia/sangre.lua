@@ -18,11 +18,12 @@ return function (storyMaker, sangre)
     local data = sangres[sangre]
 
     if not data then
-        storyMaker:Write("Del clan " .. sangre .. ", debo admitir tienes una mente ingeniosa para los nombres, lector!")
-    end
-
+    storyMaker:Write("Del clan " .. sangre .. ", debo admitir tienes una mente ingeniosa para los nombres, lector!")
+    else
     if data.texto then
         storyMaker:Write(data.texto)
     end
+end
+
 
 end
